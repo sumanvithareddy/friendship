@@ -1,0 +1,191 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7,#fad0c4);
+    overflow:hidden;
+}
+
+/* Floating Background Hearts */
+.background-hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.background-hearts::before,
+.background-hearts::after{
+    content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+    position:absolute;
+    font-size:35px;
+    opacity:.15;
+    animation:float 18s linear infinite;
+}
+
+.background-hearts::after{
+    animation-delay:9s;
+    left:30%;
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(110vh);
+    }
+
+    to{
+        transform:translateY(-120vh);
+    }
+
+}
+
+/* Main Card */
+
+.container{
+
+    width:90%;
+    max-width:900px;
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:30px;
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+    padding:50px;
+
+    text-align:center;
+
+}
+
+/* Heading */
+
+.title{
+
+    color:#d6336c;
+
+    font-size:3rem;
+
+    margin-bottom:30px;
+
+}
+
+/* Heart */
+
+.heart-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:40px 0;
+
+}
+
+.heart-box img{
+
+    width:380px;
+
+    animation:heartbeat 1.4s infinite;
+
+    filter:drop-shadow(0 0 20px rgba(255,0,90,.45));
+
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    20%{
+        transform:scale(1.07);
+    }
+
+    40%{
+        transform:scale(1.18);
+    }
+
+    60%{
+        transform:scale(1.08);
+    }
+
+    80%{
+        transform:scale(1);
+    }
+
+}
+
+/* Quote */
+
+.quote{
+
+    margin-top:20px;
+
+}
+
+.quote p{
+
+    color:#5c374c;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.quote h2{
+
+    color:#b3124b;
+
+    font-size:2rem;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.title{
+
+    font-size:2.2rem;
+
+}
+
+.heart-box img{
+
+    width:260px;
+
+}
+
+.quote p{
+
+    font-size:1rem;
+
+}
+
+.quote h2{
+
+    font-size:1.4rem;
+
+}
+
+}
